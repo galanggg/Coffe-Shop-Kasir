@@ -34,36 +34,39 @@
             this.datagridkontak = new System.Windows.Forms.DataGridView();
             this.pmenu = new System.Windows.Forms.Panel();
             this.ptransaksi = new System.Windows.Forms.Panel();
+            this.btnlogout2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbjumlah = new System.Windows.Forms.TextBox();
             this.tbharga = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btntotal = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.plogin = new System.Windows.Forms.Panel();
-            this.lblogin = new System.Windows.Forms.Label();
-            this.tbuser = new System.Windows.Forms.TextBox();
-            this.tbpass = new System.Windows.Forms.TextBox();
-            this.lbuser = new System.Windows.Forms.Label();
-            this.lbpass = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
+            this.lbpass = new System.Windows.Forms.Label();
+            this.lbuser = new System.Windows.Forms.Label();
+            this.tbpass = new System.Windows.Forms.TextBox();
+            this.tbuser = new System.Windows.Forms.TextBox();
+            this.lblogin = new System.Windows.Forms.Label();
             this.pbeli = new System.Windows.Forms.Panel();
-            this.btntambah = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnupdate = new System.Windows.Forms.Button();
-            this.Label = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnlogout = new System.Windows.Forms.Button();
-            this.btnlogout2 = new System.Windows.Forms.Button();
+            this.Label = new System.Windows.Forms.Label();
+            this.btnupdate = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btntambah = new System.Windows.Forms.Button();
+            this.btnstok = new System.Windows.Forms.Button();
+            this.btnbeli = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagridkontak)).BeginInit();
+            this.pmenu.SuspendLayout();
             this.ptransaksi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.plogin.SuspendLayout();
             this.pbeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -106,6 +109,8 @@
             // pmenu
             // 
             this.pmenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pmenu.Controls.Add(this.btnbeli);
+            this.pmenu.Controls.Add(this.btnstok);
             this.pmenu.Location = new System.Drawing.Point(0, -1);
             this.pmenu.Name = "pmenu";
             this.pmenu.Size = new System.Drawing.Size(897, 81);
@@ -134,6 +139,16 @@
             this.ptransaksi.TabIndex = 11;
             this.ptransaksi.Visible = false;
             this.ptransaksi.Paint += new System.Windows.Forms.PaintEventHandler(this.ptransaksi_Paint);
+            // 
+            // btnlogout2
+            // 
+            this.btnlogout2.Location = new System.Drawing.Point(395, 66);
+            this.btnlogout2.Name = "btnlogout2";
+            this.btnlogout2.Size = new System.Drawing.Size(72, 61);
+            this.btnlogout2.TabIndex = 36;
+            this.btnlogout2.Text = "Logout";
+            this.btnlogout2.UseVisualStyleBackColor = true;
+            this.btnlogout2.Click += new System.EventHandler(this.btnlogout2_Click);
             // 
             // label4
             // 
@@ -178,6 +193,16 @@
             this.tbharga.Size = new System.Drawing.Size(133, 28);
             this.tbharga.TabIndex = 31;
             this.tbharga.TextChanged += new System.EventHandler(this.tbharga_TextChanged);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(125, 205);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(249, 173);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // comboBox1
             // 
@@ -232,30 +257,24 @@
             this.plogin.Size = new System.Drawing.Size(894, 400);
             this.plogin.TabIndex = 0;
             // 
-            // lblogin
+            // btnlogin
             // 
-            this.lblogin.AutoSize = true;
-            this.lblogin.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblogin.Location = new System.Drawing.Point(409, 66);
-            this.lblogin.Name = "lblogin";
-            this.lblogin.Size = new System.Drawing.Size(115, 33);
-            this.lblogin.TabIndex = 0;
-            this.lblogin.Text = "Janji Jiwa";
+            this.btnlogin.Location = new System.Drawing.Point(470, 249);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(75, 23);
+            this.btnlogin.TabIndex = 5;
+            this.btnlogin.Text = "Login";
+            this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // tbuser
+            // lbpass
             // 
-            this.tbuser.Location = new System.Drawing.Point(395, 152);
-            this.tbuser.Name = "tbuser";
-            this.tbuser.Size = new System.Drawing.Size(150, 20);
-            this.tbuser.TabIndex = 1;
-            // 
-            // tbpass
-            // 
-            this.tbpass.Location = new System.Drawing.Point(395, 202);
-            this.tbpass.Name = "tbpass";
-            this.tbpass.PasswordChar = '*';
-            this.tbpass.Size = new System.Drawing.Size(150, 20);
-            this.tbpass.TabIndex = 2;
+            this.lbpass.AutoSize = true;
+            this.lbpass.Location = new System.Drawing.Point(319, 205);
+            this.lbpass.Name = "lbpass";
+            this.lbpass.Size = new System.Drawing.Size(53, 13);
+            this.lbpass.TabIndex = 4;
+            this.lbpass.Text = "Password";
             // 
             // lbuser
             // 
@@ -267,24 +286,30 @@
             this.lbuser.Text = "Username";
             this.lbuser.Click += new System.EventHandler(this.label6_Click);
             // 
-            // lbpass
+            // tbpass
             // 
-            this.lbpass.AutoSize = true;
-            this.lbpass.Location = new System.Drawing.Point(319, 205);
-            this.lbpass.Name = "lbpass";
-            this.lbpass.Size = new System.Drawing.Size(53, 13);
-            this.lbpass.TabIndex = 4;
-            this.lbpass.Text = "Password";
+            this.tbpass.Location = new System.Drawing.Point(395, 202);
+            this.tbpass.Name = "tbpass";
+            this.tbpass.PasswordChar = '*';
+            this.tbpass.Size = new System.Drawing.Size(150, 20);
+            this.tbpass.TabIndex = 2;
             // 
-            // btnlogin
+            // tbuser
             // 
-            this.btnlogin.Location = new System.Drawing.Point(470, 249);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(75, 23);
-            this.btnlogin.TabIndex = 5;
-            this.btnlogin.Text = "Login";
-            this.btnlogin.UseVisualStyleBackColor = true;
-            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            this.tbuser.Location = new System.Drawing.Point(395, 152);
+            this.tbuser.Name = "tbuser";
+            this.tbuser.Size = new System.Drawing.Size(150, 20);
+            this.tbuser.TabIndex = 1;
+            // 
+            // lblogin
+            // 
+            this.lblogin.AutoSize = true;
+            this.lblogin.Font = new System.Drawing.Font("Monotype Corsiva", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblogin.Location = new System.Drawing.Point(409, 66);
+            this.lblogin.Name = "lblogin";
+            this.lblogin.Size = new System.Drawing.Size(115, 33);
+            this.lblogin.TabIndex = 0;
+            this.lblogin.Text = "Janji Jiwa";
             // 
             // pbeli
             // 
@@ -299,32 +324,15 @@
             this.pbeli.TabIndex = 0;
             this.pbeli.Visible = false;
             // 
-            // btntambah
+            // btnlogout
             // 
-            this.btntambah.Location = new System.Drawing.Point(75, 249);
-            this.btntambah.Name = "btntambah";
-            this.btntambah.Size = new System.Drawing.Size(117, 65);
-            this.btntambah.TabIndex = 0;
-            this.btntambah.Text = "Tambah Barang";
-            this.btntambah.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(522, 29);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(333, 299);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // btnupdate
-            // 
-            this.btnupdate.Location = new System.Drawing.Point(286, 249);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(117, 65);
-            this.btnupdate.TabIndex = 2;
-            this.btnupdate.Text = "Update Barang";
-            this.btnupdate.UseVisualStyleBackColor = true;
-            this.btnupdate.Click += new System.EventHandler(this.button3_Click);
+            this.btnlogout.Location = new System.Drawing.Point(780, 352);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(75, 23);
+            this.btnlogout.TabIndex = 4;
+            this.btnlogout.Text = "Logout";
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // Label
             // 
@@ -336,35 +344,50 @@
             this.Label.TabIndex = 3;
             this.Label.Text = "Pembelian";
             // 
-            // pictureBox5
+            // btnupdate
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(125, 205);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(249, 173);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.btnupdate.Location = new System.Drawing.Point(273, 249);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(117, 65);
+            this.btnupdate.TabIndex = 2;
+            this.btnupdate.Text = "Update Barang";
+            this.btnupdate.UseVisualStyleBackColor = true;
+            this.btnupdate.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnlogout
+            // dataGridView1
             // 
-            this.btnlogout.Location = new System.Drawing.Point(780, 352);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(75, 23);
-            this.btnlogout.TabIndex = 4;
-            this.btnlogout.Text = "Logout";
-            this.btnlogout.UseVisualStyleBackColor = true;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(522, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(333, 299);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // btnlogout2
+            // btntambah
             // 
-            this.btnlogout2.Location = new System.Drawing.Point(395, 66);
-            this.btnlogout2.Name = "btnlogout2";
-            this.btnlogout2.Size = new System.Drawing.Size(72, 61);
-            this.btnlogout2.TabIndex = 36;
-            this.btnlogout2.Text = "Logout";
-            this.btnlogout2.UseVisualStyleBackColor = true;
-            this.btnlogout2.Click += new System.EventHandler(this.btnlogout2_Click);
+            this.btntambah.Location = new System.Drawing.Point(75, 249);
+            this.btntambah.Name = "btntambah";
+            this.btntambah.Size = new System.Drawing.Size(117, 65);
+            this.btntambah.TabIndex = 0;
+            this.btntambah.Text = "Tambah Barang";
+            this.btntambah.UseVisualStyleBackColor = true;
+            // 
+            // btnstok
+            // 
+            this.btnstok.Location = new System.Drawing.Point(232, 29);
+            this.btnstok.Name = "btnstok";
+            this.btnstok.Size = new System.Drawing.Size(105, 37);
+            this.btnstok.TabIndex = 0;
+            this.btnstok.Text = "Stok Barang";
+            this.btnstok.UseVisualStyleBackColor = true;
+            // 
+            // btnbeli
+            // 
+            this.btnbeli.Location = new System.Drawing.Point(395, 29);
+            this.btnbeli.Name = "btnbeli";
+            this.btnbeli.Size = new System.Drawing.Size(105, 37);
+            this.btnbeli.TabIndex = 1;
+            this.btnbeli.Text = "Beli Barang";
+            this.btnbeli.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -372,21 +395,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 485);
             this.Controls.Add(this.pmenu);
-            this.Controls.Add(this.plogin);
             this.Controls.Add(this.pbeli);
             this.Controls.Add(this.ptransaksi);
+            this.Controls.Add(this.plogin);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagridkontak)).EndInit();
+            this.pmenu.ResumeLayout(false);
             this.ptransaksi.ResumeLayout(false);
             this.ptransaksi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.plogin.ResumeLayout(false);
             this.plogin.PerformLayout();
             this.pbeli.ResumeLayout(false);
             this.pbeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,6 +447,8 @@
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Button btnlogout2;
         private System.Windows.Forms.Button btnlogout;
+        private System.Windows.Forms.Button btnbeli;
+        private System.Windows.Forms.Button btnstok;
 
     }
 }
