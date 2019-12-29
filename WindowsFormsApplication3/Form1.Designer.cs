@@ -34,11 +34,16 @@
             this.datagridkontak = new System.Windows.Forms.DataGridView();
             this.pmenu = new System.Windows.Forms.Panel();
             this.ptransaksi = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btntotal = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.tbharga = new System.Windows.Forms.TextBox();
+            this.tbjumlah = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagridkontak)).BeginInit();
             this.ptransaksi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -91,6 +96,11 @@
             // 
             // ptransaksi
             // 
+            this.ptransaksi.Controls.Add(this.label4);
+            this.ptransaksi.Controls.Add(this.label2);
+            this.ptransaksi.Controls.Add(this.label1);
+            this.ptransaksi.Controls.Add(this.tbjumlah);
+            this.ptransaksi.Controls.Add(this.tbharga);
             this.ptransaksi.Controls.Add(this.pictureBox5);
             this.ptransaksi.Controls.Add(this.comboBox1);
             this.ptransaksi.Controls.Add(this.button1);
@@ -105,6 +115,28 @@
             this.ptransaksi.Size = new System.Drawing.Size(897, 403);
             this.ptransaksi.TabIndex = 11;
             this.ptransaksi.Paint += new System.Windows.Forms.PaintEventHandler(this.ptransaksi_Paint);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(191, 219);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(249, 173);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "cappucino",
+            "espresso"});
+            this.comboBox1.Location = new System.Drawing.Point(99, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(133, 21);
+            this.comboBox1.TabIndex = 29;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -132,27 +164,49 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 18;
             // 
-            // comboBox1
+            // tbharga
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "cappucino",
-            "espresso"});
-            this.comboBox1.Location = new System.Drawing.Point(99, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 21);
-            this.comboBox1.TabIndex = 29;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.tbharga.Location = new System.Drawing.Point(99, 92);
+            this.tbharga.Multiline = true;
+            this.tbharga.Name = "tbharga";
+            this.tbharga.Size = new System.Drawing.Size(133, 28);
+            this.tbharga.TabIndex = 31;
+            this.tbharga.TextChanged += new System.EventHandler(this.tbharga_TextChanged);
             // 
-            // pictureBox5
+            // tbjumlah
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(173, 219);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(249, 173);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.tbjumlah.Location = new System.Drawing.Point(99, 144);
+            this.tbjumlah.Multiline = true;
+            this.tbjumlah.Name = "tbjumlah";
+            this.tbjumlah.Size = new System.Drawing.Size(133, 28);
+            this.tbjumlah.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 95);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Harga";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Jumlah";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Menu";
             // 
             // Form1
             // 
@@ -185,6 +239,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbjumlah;
+        private System.Windows.Forms.TextBox tbharga;
+        private System.Windows.Forms.Label label4;
 
     }
 }

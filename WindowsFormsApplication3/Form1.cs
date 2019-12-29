@@ -107,7 +107,18 @@ namespace WindowsFormsApplication3
 
         private void btntotal_Click(object sender, EventArgs e)
         {
-            
+            int harga, jumlah, tmp;
+            double total2 = 0.0;
+            double total1 = 0.0;
+
+            harga = int.Parse(tbharga.Text);
+            jumlah = int.Parse(tbjumlah.Text);
+
+            tmp = harga * jumlah;
+
+            total1 = tmp;
+
+            tbnama.Text = "Rp " + total1.ToString();
              
         }
 
@@ -121,12 +132,19 @@ namespace WindowsFormsApplication3
         {
             if (comboBox1.Text == "cappucino") {
                 pictureBox5.Image = Image.FromFile("C:\\Users\\user\\Music\\asset\\espresso.jpg");
+                tbharga.Text = "15000";
              } else if(comboBox1.Text == "espresso") {
                  pictureBox5.Image = Image.FromFile("C:\\Users\\user\\Music\\asset\\caffelate.jfif");
+                 tbharga.Text = "20000";
              }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbharga_TextChanged(object sender, EventArgs e)
         {
 
         }
