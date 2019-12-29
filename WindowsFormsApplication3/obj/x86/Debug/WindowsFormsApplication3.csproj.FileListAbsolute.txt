@@ -18,3 +18,13 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\Coffee Shop\WindowsFormsAppl
 C:\Users\user\Documents\Visual Studio 2010\Projects\Coffee Shop\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Form1.resources
 C:\Users\user\Documents\Visual Studio 2010\Projects\Coffee Shop\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Properties.Resources.resources
 C:\Users\user\Documents\Visual Studio 2010\Projects\Coffee Shop\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.exe
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.pdb
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Form1.resources
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Properties.Resources.resources
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\bin\Debug\Database1.mdf
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\bin\Debug\Database1_log.ldf
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
