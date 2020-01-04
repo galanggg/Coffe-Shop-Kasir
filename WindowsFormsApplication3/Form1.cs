@@ -143,19 +143,19 @@ namespace WindowsFormsApplication3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "cappucino") {
-                pictureBox5.Image = Image.FromFile("C:\\Users\\user\\Music\\asset\\cappucino.jfif");
+            if (comboBox1.Text == "Cappucino") {
+                pictureBox5.Image = Image.FromFile("C:\\Users\\User\\Documents\\Coffe-Shop-Kasir\\asset\\cappucino.jpg");
                 tbharga.Text = "15000";
-             } /*else if(comboBox1.Text == "espresso") {
+             } else if(comboBox1.Text == "Espresso") {
                  pictureBox5.Image = Image.FromFile("C:\\Users\\User\\Documents\\Coffe-Shop-Kasir\\asset\\espresso.jpg");
                  tbharga.Text = "20000";
-             } else if (comboBox1.Text == "affogato"){
+             } else if (comboBox1.Text == "Affogato"){
                  pictureBox5.Image = Image.FromFile("C:\\Users\\User\\Documents\\Coffe-Shop-Kasir\\asset\\affogato.jpeg");
                 tbharga.Text = "23000";
-             }else if (comboBox1.Text == "latte"){
+             }else if (comboBox1.Text == "Latte"){
                 pictureBox5.Image = Image.FromFile("C:\\Users\\User\\Documents\\Coffe-Shop-Kasir\\asset\\latte.jpg");
                 tbharga.Text = "25000";
-            } */
+             }
             
         }
 
@@ -180,6 +180,7 @@ namespace WindowsFormsApplication3
             {
                 pbeli.Visible = true;
                 plogin.Visible = false;
+                btnlogout.Visible = true;
             }
             else if (tbuser.Text == "kasir" && tbpass.Text == "000")
             {
@@ -190,23 +191,13 @@ namespace WindowsFormsApplication3
             }
             else
             {
-                MessageBox.Show("");
+                MessageBox.Show("Yang bener dong bos!");
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnlogout_Click(object sender, EventArgs e)
-        {
-            plogin.Visible = true;
-        }
-
-        private void btnlogout2_Click(object sender, EventArgs e)
-        {
-            plogin.Visible = true;
         }
 
         private void tbtotal_TextChanged_1(object sender, EventArgs e)
@@ -275,5 +266,33 @@ namespace WindowsFormsApplication3
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnlogout2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnlogout2_Click_1(object sender, EventArgs e)
+        {
+            plogin.Visible = true;
+            ptransaksi.Visible = false;
+        }
+
+        private void btnlogout_Click_1(object sender, EventArgs e)
+        {
+            plogin.Visible = true;
+            pbeli.Visible = false;
+        }
+
     }
 }
