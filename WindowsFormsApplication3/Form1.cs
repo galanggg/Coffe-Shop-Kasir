@@ -13,11 +13,12 @@ namespace WindowsFormsApplication3
 {
     public partial class Form1 : Form
     {
+        public string idterpilih;
         MySqlConnection koneksi = new MySqlConnection("SERVER=localhost;DATABASE=coffeshop;UID=root;PASSWORD=;");
+        public MySqlCommand command;
 
         public Form1()
         {
-     
             
             InitializeComponent();
         }
@@ -41,6 +42,11 @@ namespace WindowsFormsApplication3
             DataSet dataset = new DataSet();
             adapter.Fill(dataset);
             datagridkontak.DataSource = dataset.Tables[0].DefaultView;
+            dataGridView2.DataSource = dataset.Tables[0].DefaultView;
+        }
+
+        public void hapusData() {
+            
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -68,10 +74,14 @@ namespace WindowsFormsApplication3
             command = koneksi.CreateCommand();
 
             //input data query
-            command.CommandText = "INSERT INTO transaksi (nama) VALUES(@nama);";
+            command.CommandText = "INSERT INTO transaksi (nama, jumlah, harga, total, tanggal) VALUES(@nama,@jumlah,@harga,@total, @tanggal);";
             
             //tambahkan parameter
-            command.Parameters.AddWithValue("@nama", tbnama.Text);
+            command.Parameters.AddWithValue("@nama", comboBox1.Text);
+            command.Parameters.AddWithValue("@jumlah", tbjumlah.Text);
+            command.Parameters.AddWithValue("@harga", tbharga.Text);
+            command.Parameters.AddWithValue("@total",  tbtotal.Text);
+            command.Parameters.AddWithValue("@tanggal", dateTimePicker1.Text);
             //Message box berhasil disimpan
             MessageBox.Show("data berhasil disimpan");
 
@@ -79,7 +89,10 @@ namespace WindowsFormsApplication3
             command.ExecuteNonQuery();
 
             //kosongkan form
-            tbnama.Text = "";
+            comboBox1.Text = "";
+            tbjumlah.Text = "";
+            tbharga.Text = "";
+            tbtotal.Text = "";
 
             //Load data
             loadData();
@@ -118,8 +131,8 @@ namespace WindowsFormsApplication3
 
             total1 = tmp;
 
-            tbnama.Text = "Rp " + total1.ToString();
-             
+            tbtotal.Text = "Rp " + total1.ToString();
+           
         }
 
 
@@ -131,9 +144,9 @@ namespace WindowsFormsApplication3
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.Text == "cappucino") {
-                pictureBox5.Image = Image.FromFile("C:\\Users\\User\\Documents\\Coffe-Shop-Kasir\\asset\\cappucino.jpg");
+                pictureBox5.Image = Image.FromFile("C:\\Users\\user\\Music\\asset\\cappucino.jfif");
                 tbharga.Text = "15000";
-             } else if(comboBox1.Text == "espresso") {
+             } /*else if(comboBox1.Text == "espresso") {
                  pictureBox5.Image = Image.FromFile("C:\\Users\\User\\Documents\\Coffe-Shop-Kasir\\asset\\espresso.jpg");
                  tbharga.Text = "20000";
              } else if (comboBox1.Text == "affogato"){
@@ -142,7 +155,8 @@ namespace WindowsFormsApplication3
              }else if (comboBox1.Text == "latte"){
                 pictureBox5.Image = Image.FromFile("C:\\Users\\User\\Documents\\Coffe-Shop-Kasir\\asset\\latte.jpg");
                 tbharga.Text = "25000";
-            }
+            } */
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -193,6 +207,62 @@ namespace WindowsFormsApplication3
         private void btnlogout2_Click(object sender, EventArgs e)
         {
             plogin.Visible = true;
+        }
+
+        private void tbtotal_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbeli_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            int row = dataGridView2.CurrentCell.RowIndex;
+            idterpilih = dataGridView2.Rows[row].Cells[0].Value.ToString();
+
+            koneksi.Open();
+            command = new MySqlCommand("delete from transaksi where id='" + idterpilih + "'", koneksi);
+            command.ExecuteNonQuery();
+            loadData();
+            koneksi.Close();
+
+            
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pmenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = dataGridView2.CurrentCell.RowIndex;
+            idterpilih = dataGridView2.Rows[row].Cells[0].Value.ToString();
+            comboBox1.Text = dataGridView2.Rows[row].Cells[1].Value.ToString();
+            tbjumlah.Text = dataGridView2.Rows[row].Cells[2].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            command = new MySqlCommand("update transaksi set nama='" + comboBox1.Text + "' where id='" + idterpilih + "'", koneksi);
+            command.ExecuteNonQuery();
+            loadData();
+            koneksi.Close();
         }
     }
 }

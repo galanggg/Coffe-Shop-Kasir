@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
-            this.tbnama = new System.Windows.Forms.TextBox();
             this.btnsubmit = new System.Windows.Forms.Button();
             this.datagridkontak = new System.Windows.Forms.DataGridView();
             this.pmenu = new System.Windows.Forms.Panel();
-            this.ptransaksi = new System.Windows.Forms.Panel();
             this.btnlogout2 = new System.Windows.Forms.Button();
+            this.btnbeli = new System.Windows.Forms.Button();
+            this.btnstok = new System.Windows.Forms.Button();
+            this.ptransaksi = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tbtotal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,7 +47,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btntotal = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.plogin = new System.Windows.Forms.Panel();
             this.btnlogin = new System.Windows.Forms.Button();
             this.lbpass = new System.Windows.Forms.Label();
@@ -53,13 +55,14 @@
             this.tbuser = new System.Windows.Forms.TextBox();
             this.lblogin = new System.Windows.Forms.Label();
             this.pbeli = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
             this.Label = new System.Windows.Forms.Label();
             this.btnupdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btntambah = new System.Windows.Forms.Button();
-            this.btnstok = new System.Windows.Forms.Button();
-            this.btnbeli = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.datagridkontak)).BeginInit();
             this.pmenu.SuspendLayout();
             this.ptransaksi.SuspendLayout();
@@ -67,6 +70,7 @@
             this.plogin.SuspendLayout();
             this.pbeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -78,14 +82,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Total";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // tbnama
-            // 
-            this.tbnama.Location = new System.Drawing.Point(673, 96);
-            this.tbnama.Multiline = true;
-            this.tbnama.Name = "tbnama";
-            this.tbnama.Size = new System.Drawing.Size(199, 28);
-            this.tbnama.TabIndex = 5;
             // 
             // btnsubmit
             // 
@@ -109,16 +105,47 @@
             // pmenu
             // 
             this.pmenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pmenu.Controls.Add(this.btnlogout2);
             this.pmenu.Controls.Add(this.btnbeli);
             this.pmenu.Controls.Add(this.btnstok);
             this.pmenu.Location = new System.Drawing.Point(0, -1);
             this.pmenu.Name = "pmenu";
             this.pmenu.Size = new System.Drawing.Size(897, 81);
             this.pmenu.TabIndex = 10;
+            this.pmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pmenu_Paint);
+            // 
+            // btnlogout2
+            // 
+            this.btnlogout2.Location = new System.Drawing.Point(812, 13);
+            this.btnlogout2.Name = "btnlogout2";
+            this.btnlogout2.Size = new System.Drawing.Size(72, 61);
+            this.btnlogout2.TabIndex = 36;
+            this.btnlogout2.Text = "Logout";
+            this.btnlogout2.UseVisualStyleBackColor = true;
+            this.btnlogout2.Click += new System.EventHandler(this.btnlogout2_Click);
+            // 
+            // btnbeli
+            // 
+            this.btnbeli.Location = new System.Drawing.Point(395, 29);
+            this.btnbeli.Name = "btnbeli";
+            this.btnbeli.Size = new System.Drawing.Size(105, 37);
+            this.btnbeli.TabIndex = 1;
+            this.btnbeli.Text = "Beli Barang";
+            this.btnbeli.UseVisualStyleBackColor = true;
+            // 
+            // btnstok
+            // 
+            this.btnstok.Location = new System.Drawing.Point(232, 29);
+            this.btnstok.Name = "btnstok";
+            this.btnstok.Size = new System.Drawing.Size(105, 37);
+            this.btnstok.TabIndex = 0;
+            this.btnstok.Text = "Stok Barang";
+            this.btnstok.UseVisualStyleBackColor = true;
             // 
             // ptransaksi
             // 
-            this.ptransaksi.Controls.Add(this.btnlogout2);
+            this.ptransaksi.Controls.Add(this.dateTimePicker1);
+            this.ptransaksi.Controls.Add(this.tbtotal);
             this.ptransaksi.Controls.Add(this.label4);
             this.ptransaksi.Controls.Add(this.label2);
             this.ptransaksi.Controls.Add(this.label1);
@@ -128,10 +155,8 @@
             this.ptransaksi.Controls.Add(this.comboBox1);
             this.ptransaksi.Controls.Add(this.button1);
             this.ptransaksi.Controls.Add(this.btntotal);
-            this.ptransaksi.Controls.Add(this.dateTimePicker1);
             this.ptransaksi.Controls.Add(this.btnsubmit);
             this.ptransaksi.Controls.Add(this.label3);
-            this.ptransaksi.Controls.Add(this.tbnama);
             this.ptransaksi.Controls.Add(this.datagridkontak);
             this.ptransaksi.Location = new System.Drawing.Point(0, 81);
             this.ptransaksi.Name = "ptransaksi";
@@ -140,15 +165,21 @@
             this.ptransaksi.Visible = false;
             this.ptransaksi.Paint += new System.Windows.Forms.PaintEventHandler(this.ptransaksi_Paint);
             // 
-            // btnlogout2
+            // dateTimePicker1
             // 
-            this.btnlogout2.Location = new System.Drawing.Point(395, 66);
-            this.btnlogout2.Name = "btnlogout2";
-            this.btnlogout2.Size = new System.Drawing.Size(72, 61);
-            this.btnlogout2.TabIndex = 36;
-            this.btnlogout2.Text = "Logout";
-            this.btnlogout2.UseVisualStyleBackColor = true;
-            this.btnlogout2.Click += new System.EventHandler(this.btnlogout2_Click);
+            this.dateTimePicker1.Location = new System.Drawing.Point(630, 36);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 37;
+            // 
+            // tbtotal
+            // 
+            this.tbtotal.Location = new System.Drawing.Point(672, 96);
+            this.tbtotal.Multiline = true;
+            this.tbtotal.Name = "tbtotal";
+            this.tbtotal.Size = new System.Drawing.Size(133, 28);
+            this.tbtotal.TabIndex = 36;
+            this.tbtotal.TextChanged += new System.EventHandler(this.tbtotal_TextChanged_1);
             // 
             // label4
             // 
@@ -229,20 +260,13 @@
             // 
             // btntotal
             // 
-            this.btntotal.Location = new System.Drawing.Point(797, 130);
+            this.btntotal.Location = new System.Drawing.Point(730, 141);
             this.btntotal.Name = "btntotal";
             this.btntotal.Size = new System.Drawing.Size(75, 37);
             this.btntotal.TabIndex = 19;
             this.btntotal.Text = "total";
             this.btntotal.UseVisualStyleBackColor = true;
             this.btntotal.Click += new System.EventHandler(this.btntotal_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(672, 28);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 18;
             // 
             // plogin
             // 
@@ -313,16 +337,40 @@
             // 
             // pbeli
             // 
+            this.pbeli.Controls.Add(this.button2);
+            this.pbeli.Controls.Add(this.btndelete);
             this.pbeli.Controls.Add(this.btnlogout);
             this.pbeli.Controls.Add(this.Label);
             this.pbeli.Controls.Add(this.btnupdate);
             this.pbeli.Controls.Add(this.dataGridView1);
             this.pbeli.Controls.Add(this.btntambah);
+            this.pbeli.Controls.Add(this.dataGridView2);
             this.pbeli.Location = new System.Drawing.Point(0, 81);
             this.pbeli.Name = "pbeli";
             this.pbeli.Size = new System.Drawing.Size(894, 403);
             this.pbeli.TabIndex = 0;
             this.pbeli.Visible = false;
+            this.pbeli.Paint += new System.Windows.Forms.PaintEventHandler(this.pbeli_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(125, 228);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 44);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "UPDATE";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.Location = new System.Drawing.Point(18, 228);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(91, 44);
+            this.btndelete.TabIndex = 11;
+            this.btndelete.Text = "DELETE !";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnlogout
             // 
@@ -338,7 +386,7 @@
             // 
             this.Label.AutoSize = true;
             this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label.Location = new System.Drawing.Point(69, 55);
+            this.Label.Location = new System.Drawing.Point(485, 2);
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(150, 31);
             this.Label.TabIndex = 3;
@@ -346,7 +394,7 @@
             // 
             // btnupdate
             // 
-            this.btnupdate.Location = new System.Drawing.Point(273, 249);
+            this.btnupdate.Location = new System.Drawing.Point(630, 228);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(117, 65);
             this.btnupdate.TabIndex = 2;
@@ -357,37 +405,29 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(522, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(491, 45);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(333, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(381, 173);
             this.dataGridView1.TabIndex = 1;
             // 
             // btntambah
             // 
-            this.btntambah.Location = new System.Drawing.Point(75, 249);
+            this.btntambah.Location = new System.Drawing.Point(491, 228);
             this.btntambah.Name = "btntambah";
             this.btntambah.Size = new System.Drawing.Size(117, 65);
             this.btntambah.TabIndex = 0;
             this.btntambah.Text = "Tambah Barang";
             this.btntambah.UseVisualStyleBackColor = true;
             // 
-            // btnstok
+            // dataGridView2
             // 
-            this.btnstok.Location = new System.Drawing.Point(232, 29);
-            this.btnstok.Name = "btnstok";
-            this.btnstok.Size = new System.Drawing.Size(105, 37);
-            this.btnstok.TabIndex = 0;
-            this.btnstok.Text = "Stok Barang";
-            this.btnstok.UseVisualStyleBackColor = true;
-            // 
-            // btnbeli
-            // 
-            this.btnbeli.Location = new System.Drawing.Point(395, 29);
-            this.btnbeli.Name = "btnbeli";
-            this.btnbeli.Size = new System.Drawing.Size(105, 37);
-            this.btnbeli.TabIndex = 1;
-            this.btnbeli.Text = "Beli Barang";
-            this.btnbeli.UseVisualStyleBackColor = true;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(18, 45);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(393, 173);
+            this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // Form1
             // 
@@ -411,6 +451,7 @@
             this.pbeli.ResumeLayout(false);
             this.pbeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,12 +459,10 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbnama;
         private System.Windows.Forms.Button btnsubmit;
         private System.Windows.Forms.DataGridView datagridkontak;
         private System.Windows.Forms.Panel pmenu;
         private System.Windows.Forms.Panel ptransaksi;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btntotal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -449,6 +488,11 @@
         private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Button btnbeli;
         private System.Windows.Forms.Button btnstok;
+        private System.Windows.Forms.TextBox tbtotal;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
     }
 }
