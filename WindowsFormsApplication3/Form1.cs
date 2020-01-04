@@ -264,5 +264,16 @@ namespace WindowsFormsApplication3
             loadData();
             koneksi.Close();
         }
+
+        private void btntambah_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2(this);
+            f2.Show();
+        }
+
+        public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

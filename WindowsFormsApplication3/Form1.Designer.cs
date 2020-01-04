@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbjumlah = new System.Windows.Forms.TextBox();
             this.tbharga = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btntotal = new System.Windows.Forms.Button();
@@ -63,14 +62,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btntambah = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagridkontak)).BeginInit();
             this.pmenu.SuspendLayout();
             this.ptransaksi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.plogin.SuspendLayout();
             this.pbeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -105,7 +106,6 @@
             // pmenu
             // 
             this.pmenu.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pmenu.Controls.Add(this.btnlogout2);
             this.pmenu.Controls.Add(this.btnbeli);
             this.pmenu.Controls.Add(this.btnstok);
             this.pmenu.Location = new System.Drawing.Point(0, -1);
@@ -116,7 +116,7 @@
             // 
             // btnlogout2
             // 
-            this.btnlogout2.Location = new System.Drawing.Point(812, 13);
+            this.btnlogout2.Location = new System.Drawing.Point(368, 81);
             this.btnlogout2.Name = "btnlogout2";
             this.btnlogout2.Size = new System.Drawing.Size(72, 61);
             this.btnlogout2.TabIndex = 36;
@@ -144,6 +144,7 @@
             // 
             // ptransaksi
             // 
+            this.ptransaksi.Controls.Add(this.btnlogout2);
             this.ptransaksi.Controls.Add(this.dateTimePicker1);
             this.ptransaksi.Controls.Add(this.tbtotal);
             this.ptransaksi.Controls.Add(this.label4);
@@ -224,16 +225,6 @@
             this.tbharga.Size = new System.Drawing.Size(133, 28);
             this.tbharga.TabIndex = 31;
             this.tbharga.TextChanged += new System.EventHandler(this.tbharga_TextChanged);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(125, 205);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(249, 173);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // comboBox1
             // 
@@ -337,6 +328,7 @@
             // 
             // pbeli
             // 
+            this.pbeli.Controls.Add(this.button3);
             this.pbeli.Controls.Add(this.button2);
             this.pbeli.Controls.Add(this.btndelete);
             this.pbeli.Controls.Add(this.btnlogout);
@@ -396,7 +388,7 @@
             // 
             this.btnupdate.Location = new System.Drawing.Point(630, 228);
             this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(117, 65);
+            this.btnupdate.Size = new System.Drawing.Size(107, 53);
             this.btnupdate.TabIndex = 2;
             this.btnupdate.Text = "Update Barang";
             this.btnupdate.UseVisualStyleBackColor = true;
@@ -409,15 +401,17 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(381, 173);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btntambah
             // 
             this.btntambah.Location = new System.Drawing.Point(491, 228);
             this.btntambah.Name = "btntambah";
-            this.btntambah.Size = new System.Drawing.Size(117, 65);
+            this.btntambah.Size = new System.Drawing.Size(108, 53);
             this.btntambah.TabIndex = 0;
             this.btntambah.Text = "Tambah Barang";
             this.btntambah.UseVisualStyleBackColor = true;
+            this.btntambah.Click += new System.EventHandler(this.btntambah_Click);
             // 
             // dataGridView2
             // 
@@ -428,6 +422,25 @@
             this.dataGridView2.TabIndex = 10;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(767, 228);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 53);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Hapus Barang";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(125, 205);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(249, 173);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 30;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // Form1
             // 
@@ -445,13 +458,13 @@
             this.pmenu.ResumeLayout(false);
             this.ptransaksi.ResumeLayout(false);
             this.ptransaksi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.plogin.ResumeLayout(false);
             this.plogin.PerformLayout();
             this.pbeli.ResumeLayout(false);
             this.pbeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -482,7 +495,6 @@
         private System.Windows.Forms.Panel pbeli;
         private System.Windows.Forms.Button btntambah;
         private System.Windows.Forms.Button btnupdate;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.Button btnlogout2;
         private System.Windows.Forms.Button btnlogout;
@@ -493,6 +505,8 @@
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.DataGridView dataGridView1;
 
     }
 }
