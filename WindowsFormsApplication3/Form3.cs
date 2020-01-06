@@ -20,5 +20,10 @@ namespace WindowsFormsApplication3
         {
 
         }
+
+        private void crystalReportViewer1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

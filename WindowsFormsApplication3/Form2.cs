@@ -105,7 +105,7 @@ namespace WindowsFormsApplication3
         private void btnupdate_Click(object sender, EventArgs e)
         {
             koneksi.Open();
-            command = new MySqlCommand("update barang set namabarang='" + tbbarang.Text + "'harga'" + tbharga.Text + "'jumlah'" + tbjumlah.Text +"' where id='" + idterpilih1 + "'", koneksi);
+            command = new MySqlCommand("update barang set namabarang='" + tbbarang.Text + "',harga1='" + tbharga.Text + "',stok='" + tbjumlah.Text +"' where id='" + idterpilih1 + "'", koneksi);
             command.ExecuteNonQuery();
             kirimData();
             koneksi.Close();
