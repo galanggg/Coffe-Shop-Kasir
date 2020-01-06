@@ -42,7 +42,6 @@
             this.tbharga = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btntotal = new System.Windows.Forms.Button();
             this.plogin = new System.Windows.Forms.Panel();
             this.btnlogin = new System.Windows.Forms.Button();
@@ -52,16 +51,27 @@
             this.tbuser = new System.Windows.Forms.TextBox();
             this.lblogin = new System.Windows.Forms.Label();
             this.pbeli = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnlogout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.Label = new System.Windows.Forms.Label();
-            this.btnupdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btntambah = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbnamaupdate = new System.Windows.Forms.TextBox();
+            this.tbjumlahupdate = new System.Windows.Forms.TextBox();
+            this.tbhargaupdate = new System.Windows.Forms.TextBox();
+            this.tbtotalupdate = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.datagridkontak)).BeginInit();
             this.ptransaksi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -74,10 +84,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Minion Pro SmBd", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(31, 292);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 23);
+            this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -113,7 +123,6 @@
             this.ptransaksi.Controls.Add(this.tbharga);
             this.ptransaksi.Controls.Add(this.pictureBox5);
             this.ptransaksi.Controls.Add(this.comboBox1);
-            this.ptransaksi.Controls.Add(this.button1);
             this.ptransaksi.Controls.Add(this.btntotal);
             this.ptransaksi.Controls.Add(this.btnsubmit);
             this.ptransaksi.Controls.Add(this.label3);
@@ -154,30 +163,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Minion Pro SmBd", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 34);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 27);
+            this.label4.Size = new System.Drawing.Size(66, 25);
             this.label4.TabIndex = 35;
             this.label4.Text = "Menu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Minion Pro SmBd", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(31, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 23);
+            this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 34;
             this.label2.Text = "Jumlah";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Minion Pro SmBd", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(31, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 23);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 33;
             this.label1.Text = "Harga";
             // 
@@ -221,15 +230,6 @@
             this.comboBox1.Size = new System.Drawing.Size(133, 21);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(576, 384);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Cetak";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btntotal
             // 
@@ -310,22 +310,134 @@
             // 
             // pbeli
             // 
-            this.pbeli.Controls.Add(this.label5);
-            this.pbeli.Controls.Add(this.btnlogout);
+            this.pbeli.Controls.Add(this.label9);
+            this.pbeli.Controls.Add(this.label8);
+            this.pbeli.Controls.Add(this.label7);
+            this.pbeli.Controls.Add(this.label6);
+            this.pbeli.Controls.Add(this.tbtotalupdate);
+            this.pbeli.Controls.Add(this.tbhargaupdate);
+            this.pbeli.Controls.Add(this.tbjumlahupdate);
+            this.pbeli.Controls.Add(this.tbnamaupdate);
+            this.pbeli.Controls.Add(this.button1);
+            this.pbeli.Controls.Add(this.button4);
             this.pbeli.Controls.Add(this.button3);
+            this.pbeli.Controls.Add(this.btnlogout);
             this.pbeli.Controls.Add(this.button2);
             this.pbeli.Controls.Add(this.btndelete);
             this.pbeli.Controls.Add(this.Label);
-            this.pbeli.Controls.Add(this.btnupdate);
             this.pbeli.Controls.Add(this.dataGridView1);
             this.pbeli.Controls.Add(this.btntambah);
             this.pbeli.Controls.Add(this.dataGridView2);
+            this.pbeli.Controls.Add(this.label5);
             this.pbeli.Location = new System.Drawing.Point(0, 1);
             this.pbeli.Name = "pbeli";
             this.pbeli.Size = new System.Drawing.Size(894, 483);
             this.pbeli.TabIndex = 0;
             this.pbeli.Visible = false;
             this.pbeli.Paint += new System.Windows.Forms.PaintEventHandler(this.pbeli_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(781, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 44);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Cetak";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(328, 373);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(91, 44);
+            this.button4.TabIndex = 40;
+            this.button4.Text = "Cetak";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(603, 271);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(108, 53);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "Refresh";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_3);
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.Location = new System.Drawing.Point(789, 395);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(95, 34);
+            this.btnlogout.TabIndex = 37;
+            this.btnlogout.Text = "Logout";
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(133, 373);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(91, 44);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Update";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.BackColor = System.Drawing.Color.Transparent;
+            this.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btndelete.Location = new System.Drawing.Point(26, 373);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(91, 44);
+            this.btndelete.TabIndex = 11;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // Label
+            // 
+            this.Label.AutoSize = true;
+            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label.Location = new System.Drawing.Point(468, 42);
+            this.Label.Name = "Label";
+            this.Label.Size = new System.Drawing.Size(150, 31);
+            this.Label.TabIndex = 3;
+            this.Label.Text = "Pembelian";
+            this.Label.Click += new System.EventHandler(this.Label_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(474, 92);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(410, 173);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btntambah
+            // 
+            this.btntambah.Location = new System.Drawing.Point(474, 271);
+            this.btntambah.Name = "btntambah";
+            this.btntambah.Size = new System.Drawing.Size(108, 53);
+            this.btntambah.TabIndex = 0;
+            this.btntambah.Text = "Data Pembelian";
+            this.btntambah.UseVisualStyleBackColor = true;
+            this.btntambah.Click += new System.EventHandler(this.btntambah_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(12, 92);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(419, 178);
+            this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label5
             // 
@@ -338,102 +450,106 @@
             this.label5.Text = "Data Transaksi";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // btnlogout
+            // tbnamaupdate
             // 
-            this.btnlogout.Location = new System.Drawing.Point(789, 395);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(95, 34);
-            this.btnlogout.TabIndex = 37;
-            this.btnlogout.Text = "Logout";
-            this.btnlogout.UseVisualStyleBackColor = true;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click_1);
+            this.tbnamaupdate.Location = new System.Drawing.Point(18, 309);
+            this.tbnamaupdate.Multiline = true;
+            this.tbnamaupdate.Name = "tbnamaupdate";
+            this.tbnamaupdate.Size = new System.Drawing.Size(91, 37);
+            this.tbnamaupdate.TabIndex = 42;
             // 
-            // button3
+            // tbjumlahupdate
             // 
-            this.button3.Location = new System.Drawing.Point(780, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 53);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Hapus Barang";
-            this.button3.UseVisualStyleBackColor = true;
+            this.tbjumlahupdate.Location = new System.Drawing.Point(125, 309);
+            this.tbjumlahupdate.Multiline = true;
+            this.tbjumlahupdate.Name = "tbjumlahupdate";
+            this.tbjumlahupdate.Size = new System.Drawing.Size(91, 37);
+            this.tbjumlahupdate.TabIndex = 43;
             // 
-            // button2
+            // tbhargaupdate
             // 
-            this.button2.Location = new System.Drawing.Point(119, 277);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 44);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.tbhargaupdate.Location = new System.Drawing.Point(235, 309);
+            this.tbhargaupdate.Multiline = true;
+            this.tbhargaupdate.Name = "tbhargaupdate";
+            this.tbhargaupdate.Size = new System.Drawing.Size(91, 37);
+            this.tbhargaupdate.TabIndex = 44;
             // 
-            // btndelete
+            // tbtotalupdate
             // 
-            this.btndelete.Location = new System.Drawing.Point(12, 277);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(91, 44);
-            this.btndelete.TabIndex = 11;
-            this.btndelete.Text = "Delete";
-            this.btndelete.UseVisualStyleBackColor = true;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            this.tbtotalupdate.Location = new System.Drawing.Point(346, 309);
+            this.tbtotalupdate.Multiline = true;
+            this.tbtotalupdate.Name = "tbtotalupdate";
+            this.tbtotalupdate.Size = new System.Drawing.Size(91, 37);
+            this.tbtotalupdate.TabIndex = 45;
             // 
-            // Label
+            // label6
             // 
-            this.Label.AutoSize = true;
-            this.Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label.Location = new System.Drawing.Point(468, 42);
-            this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(150, 31);
-            this.Label.TabIndex = 3;
-            this.Label.Text = "Pembelian";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(29, 286);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 20);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Nama";
             // 
-            // btnupdate
+            // label7
             // 
-            this.btnupdate.Location = new System.Drawing.Point(630, 275);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(107, 53);
-            this.btnupdate.TabIndex = 2;
-            this.btnupdate.Text = "Update Barang";
-            this.btnupdate.UseVisualStyleBackColor = true;
-            this.btnupdate.Click += new System.EventHandler(this.button3_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(136, 286);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 20);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Jumlah";
             // 
-            // dataGridView1
+            // label8
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(474, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(410, 173);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(251, 286);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 20);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Harga";
             // 
-            // btntambah
+            // label9
             // 
-            this.btntambah.Location = new System.Drawing.Point(474, 275);
-            this.btntambah.Name = "btntambah";
-            this.btntambah.Size = new System.Drawing.Size(108, 53);
-            this.btntambah.TabIndex = 0;
-            this.btntambah.Text = "Tambah Barang";
-            this.btntambah.UseVisualStyleBackColor = true;
-            this.btntambah.Click += new System.EventHandler(this.btntambah_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(365, 286);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 20);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "Total";
             // 
-            // dataGridView2
+            // shapeContainer1
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 91);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(393, 173);
-            this.dataGridView2.TabIndex = 10;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(896, 442);
+            this.shapeContainer1.TabIndex = 12;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 438;
+            this.lineShape1.X2 = 453;
+            this.lineShape1.Y1 = 1;
+            this.lineShape1.Y2 = 443;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 442);
+            this.Controls.Add(this.pbeli);
             this.Controls.Add(this.ptransaksi);
             this.Controls.Add(this.plogin);
-            this.Controls.Add(this.pbeli);
+            this.Controls.Add(this.shapeContainer1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -458,7 +574,6 @@
         private System.Windows.Forms.DataGridView datagridkontak;
         private System.Windows.Forms.Panel ptransaksi;
         private System.Windows.Forms.Button btntotal;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
@@ -475,18 +590,29 @@
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Panel pbeli;
         private System.Windows.Forms.Button btntambah;
-        private System.Windows.Forms.Button btnupdate;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.TextBox tbtotal;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button3;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnlogout2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnlogout;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbnamaupdate;
+        private System.Windows.Forms.TextBox tbtotalupdate;
+        private System.Windows.Forms.TextBox tbhargaupdate;
+        private System.Windows.Forms.TextBox tbjumlahupdate;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
 
     }
 }

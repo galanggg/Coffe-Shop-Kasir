@@ -11,13 +11,14 @@ namespace WindowsFormsApplication3
 {
     public partial class Form2 : Form
     {
+        public string idterpilih1;
         MySqlConnection koneksi = new MySqlConnection("SERVER=localhost;DATABASE=coffeshop;UID=root;PASSWORD=;");
         public MySqlCommand command;
-        private Form1 form1;
-        public Form2(Form1 form1)
+        //private Form1 form1;
+        public Form2()
         {
             InitializeComponent();
-            this.form1 = form1;
+            //this.form1 = form1;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -33,6 +34,7 @@ namespace WindowsFormsApplication3
         }
 
         public void kirimData() {
+            
             MySqlCommand command;
             command = koneksi.CreateCommand();
 
@@ -41,7 +43,8 @@ namespace WindowsFormsApplication3
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataSet dataset = new DataSet();
             adapter.Fill(dataset);
-            form1.dataGridView1.DataSource = dataset.Tables[0].DefaultView;
+            //dataGridView1.DataSource = dataset.Tables[0].DefaultView;
+            dgpembelian.DataSource = dataset.Tables[0].DefaultView;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,10 +57,10 @@ namespace WindowsFormsApplication3
             command = koneksi.CreateCommand();
 
             //input data query
-            command.CommandText = "INSERT INTO barang (barang, harga1, stok, tanggal) VALUES(@barang,@harga1,@stok,@tanggal);";
+            command.CommandText = "INSERT INTO barang (namabarang, harga1, stok, tanggal) VALUES(@namabarang,@harga1,@stok,@tanggal);";
 
             //tambahkan parameter
-            command.Parameters.AddWithValue("@barang", tbbarang.Text);
+            command.Parameters.AddWithValue("@namabarang", tbbarang.Text);
             command.Parameters.AddWithValue("@harga1", tbharga.Text);
             command.Parameters.AddWithValue("@stok", tbjumlah.Text);
             command.Parameters.AddWithValue("@tanggal", dateTimePicker1.Text);
@@ -82,6 +85,51 @@ namespace WindowsFormsApplication3
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void tbbarang_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void tbjumlah_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgpembelian_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            command = new MySqlCommand("update barang set namabarang='" + tbbarang.Text + "'harga'" + tbharga.Text + "'jumlah'" + tbjumlah.Text +"' where id='" + idterpilih1 + "'", koneksi);
+            command.ExecuteNonQuery();
+            kirimData();
+            koneksi.Close();
+        }
+
+        private void dgpembelian_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = dgpembelian.CurrentCell.RowIndex;
+            idterpilih1 = dgpembelian.Rows[row].Cells[0].Value.ToString();
+            tbbarang.Text = dgpembelian.Rows[row].Cells[1].Value.ToString();
+            tbharga.Text = dgpembelian.Rows[row].Cells[2].Value.ToString();
+            tbjumlah.Text = dgpembelian.Rows[row].Cells[3].Value.ToString();
+        }
+
+        private void btnhapus_Click(object sender, EventArgs e)
+        {
+            int row = dgpembelian.CurrentCell.RowIndex;
+            idterpilih1 = dgpembelian.Rows[row].Cells[0].Value.ToString();
+
+            koneksi.Open();
+            command = new MySqlCommand("delete from barang where id='" + idterpilih1 + "'", koneksi);
+            command.ExecuteNonQuery();
+            kirimData();
+            koneksi.Close();
         }
     }
 }

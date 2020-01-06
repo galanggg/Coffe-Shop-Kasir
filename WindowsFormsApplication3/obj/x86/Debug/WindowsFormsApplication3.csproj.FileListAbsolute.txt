@@ -40,3 +40,6 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\Coffe-Shop-Kasir\WindowsForm
 C:\Users\user\Documents\Visual Studio 2010\Projects\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2010\Projects\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Form2.resources
 C:\Users\User\Documents\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Form2.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\Coffe-Shop-Kasir\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\user\Documents\Visual Studio 2010\Projects\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Form3.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\Coffe-Shop-Kasir\WindowsFormsApplication3\obj\x86\Debug\WindowsFormsApplication3.Form4.resources
